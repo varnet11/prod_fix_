@@ -30,8 +30,12 @@ export class NodeProvider {
   }: Steno.DatabaseOptions<T>): NodeAdapter<T> {
     this.#entity.addEntity(name, entity)
 
-    // TODO: add support for AsyncWriter
     const adapter = new SyncWriter<T>(name, this.#directoryProvider)
+
+    async write(support.NodeAdapter<T>) {
+      support.name: this.#entity.getName(name)
+    }
+
     const db = new NodeAdapter<T>({
       name,
       adapter,
